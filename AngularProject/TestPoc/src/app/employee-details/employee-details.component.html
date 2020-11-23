@@ -1,0 +1,58 @@
+<div class="container" *ngIf="employeeDetails?.empId>0">
+    <div class="panel panel-primary" id="mydiv">
+        <div class="panel-heading">
+            <div class="panel-title">
+                <h3>{{employeeDetails?.ename}}</h3>
+            </div>
+        </div>
+        <div class="panel-body">
+            <div class="col-xs-10">
+                <div class="row">
+                    <div class="col-xs-6">
+                        Job
+                    </div>
+                    <div class="col-xs-6">
+                        : {{employeeDetails?.job}}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-6">
+                        Salary
+                    </div>
+                    <div class="col-xs-6">
+                        :  {{employeeDetails?.salary |currency:'INR':true}}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-6">
+                        Salary Type
+                    </div>
+                    <div class="col-xs-6">
+                        :  {{employeeDetails?.salaryType}}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-6">
+                        Annual Salary
+                    </div>
+                    <div class="col-xs-6">
+                        : {{employeeDetails?.annualSalary |currency:'INR':true}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<div class="row">
+    <div class="alert alert-primary col-md-8 col-md-offset-2" role="alert" *ngIf="!employeeDetails">
+        No Record found!!!
+    </div>
+</div>
+
+
+

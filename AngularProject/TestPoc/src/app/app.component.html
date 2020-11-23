@@ -1,0 +1,18 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<div class="container">
+  <form class="form-inline" [formGroup]="employee">
+    <div class="form-group mx-sm-3 mb-2">      
+
+      <input type="text" class="form-control" formControlName="empId" id="empId">
+    </div>
+    <button type="submit" class="btn btn-primary mb-2" #empId (click)="GetEmployee()">Get Employee</button>
+  </form>
+</div>
+
+
+<app-employee-details [employeeDetails]="employeeDetails" *ngIf="isDetails"></app-employee-details>
+<app-employee-list [employeeList]="employeeList" *ngIf="isList"></app-employee-list>
+
+
+<router-outlet></router-outlet>

@@ -1,0 +1,26 @@
+<div class="container">
+   
+    <h1>Employee List</h1>
+    <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Job</th>
+            <th scope="col">Salary</th>
+            <th scope="col">Salary Type</th>
+            <th scope="col">Annual Salary</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let empList of employeeList; index as i">
+            <td>{{i+1}}</td>
+            <td>{{empList.ename}}</td>
+            <td>{{empList.job}}</td>
+            <td>{{empList.salary|currency:'INR':true}}</td>
+            <td>{{empList.salaryType}}</td>
+            <td>{{empList.annualSalary|currency:'INR':true}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
